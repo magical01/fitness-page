@@ -1,0 +1,66 @@
+.header {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 36px;
+    padding-bottom: 30px;
+  }
+
+  &__logo {
+    font-family: 'Muller';
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+
+  &__btn {
+    border: 1px solid #1E1E1F;
+    border-radius: 28.5px;
+    padding: 16px 44px;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(#1e1e1f, 0.8);
+    background-color: transparent;
+  }
+
+}
+
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    font-size: 18px;
+    color: rgba(#1e1e1f, 0.6);
+  }
+
+  &__item + &__item {
+    margin-left: 48px;
+  }
+
+  &__link {
+    position: relative;
+
+    &--active {
+      padding-left: 4px;
+      padding-right: 4px;
+      color: rgba(#1e1e1f, 0.8);
+
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 8px;
+        background: linear-gradient(93.5deg, #DDFF51 4.85%, rgba(206, 255, 6, 0.89) 89.25%);
+      }
+    }
+  }
+}

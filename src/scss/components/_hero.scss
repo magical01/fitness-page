@@ -1,0 +1,64 @@
+.hero {
+  padding-top: 100px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    padding-top: 65px;
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: 22px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  &__subject {
+    display: flex;
+    width: 500px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: "FuturaPT";
+    font-weight: 450;
+    font-size: 48px;
+    line-height: 50px;
+
+    span {
+      display: inline-block;
+      margin-right: 30px;
+      color: rgba(221, 255, 81, 1);
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: rbga(#1E1E1F, 0.8);
+  }
+
+  &__buttons {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  &__course {
+    padding: 16px 78px;
+  }
+
+  &__programm {
+    padding: 16px 52px;
+  }
+
+  &__picture {
+    filter: drop-shadow(0px 0px 49px #CEFF06);
+    border-radius: 10px;
+  }
+}
