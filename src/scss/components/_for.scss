@@ -1,0 +1,153 @@
+.for {
+  padding-bottom: 172px;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    max-height: 1355px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 460px;
+
+
+    .for__image picture{
+      img {
+        transition: all .5s;
+      }
+    }
+
+    @include hover {
+      .for__image picture img{
+        transform: rotate(15deg);
+      }
+
+      .for__image picture {
+        .for__ellipse--one {
+          width: 200px;
+          height: 200px;
+        }
+
+        .for__ellipse--two {
+          width: 257px;
+          height: 257px;
+        }
+
+        .for__ellipse--three {
+          width: 307px;
+          height: 307px;
+        }
+      }
+
+      .for__text {
+        span {
+          color: var(--green-color);
+        }
+      }
+    }
+
+    &:nth-of-type(1) {
+      align-self: flex-start;
+      transform: translate(-27px, -4px);
+
+      .for__img {
+        transform: translateY(15px);
+      }
+    }
+
+    &:nth-of-type(2) {
+      align-self: center;
+      transform: translate(213px, -218px);
+
+      .for__img {
+        transform: translateY(-33px);
+      }
+    }
+
+    &:nth-of-type(3) {
+      align-self: flex-start;
+      width: 500px;
+      transform: translate(30px, -218px);
+
+      .for__img {
+        transform: translateY(-22px);
+      }
+
+      .for__text {
+        width: 100%;
+      }
+    }
+
+    &:nth-of-type(4) {
+      align-self: flex-end;
+      transform: translate(37px, -463px);
+
+      .for__img {
+        transform: translateY(10px);
+      }
+    }
+
+    &:nth-of-type(5) {
+      align-self: center;
+      transform: translate(1px, -454px);
+
+      .for__text {
+        width: 370px;
+      }
+
+    }
+
+  }
+
+  &__text {
+    // max-width: 450px;
+    width: 410px;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+
+    span {
+      transition: all .3s;
+    }
+  }
+
+  &__picture {
+    position: relative;
+    display: inline-flex;
+  }
+
+  &__img {
+    position: relative;
+    z-index: 50;
+  }
+
+  &__ellipse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    width: 0px;
+    height: 0px;
+    background: linear-gradient(93.5deg, #DDFF51 4.85%, rgba(206, 255, 6, 0.89) 89.25%);
+    transform: translate(-50%, -50%);
+    transition: all .6s;
+
+    &--one {
+      z-index: 10;
+      opacity: 0.8;
+    }
+
+    &--two {
+      opacity: 0.4;
+    }
+
+    &--three {
+      opacity: 0.1;
+    }
+  }
+
+}

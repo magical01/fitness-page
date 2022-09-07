@@ -1,0 +1,104 @@
+.content-course {
+  padding-top: 85px;
+  padding-bottom: 160px;
+  background-color: #000;
+  height: 990px;
+
+  &__container {
+    position: relative;
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    width: 600px;
+  }
+
+  &__right {
+    position: relative;
+
+    picture {
+      position: absolute;
+      display: flex;
+      width: 696px;
+      right: -85px;
+    }
+
+  }
+
+
+  &__title {
+    color: var(--white-color);
+  }
+
+  &__picture {
+    animation: 12s linear 0s infinite sphere-rotate ;
+  }
+
+}
+
+.course {
+  &__list {
+    margin-top: 94px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    min-width: 285px;
+    min-height: 80px;
+    @include hover {
+      .course__num {
+        font-weight: 700;
+        font-size: 64px;
+        color: var(--green-color);
+      }
+
+      .course__text {
+        font-weight: 500;
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__item + &__item {
+    margin-top: 27px;
+  }
+
+  &__num {
+    display: inline-flex;
+    margin-right: 30px;
+    min-width: 90px;
+    font-family: 'Muller';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    transition: all .3s;
+
+
+  }
+
+  &__text {
+    display: inline-flex;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--white-color);
+    transition: all .3s;
+  }
+
+}
+
+@keyframes sphere-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

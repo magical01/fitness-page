@@ -1,5 +1,6 @@
 .hero {
   padding-top: 100px;
+  padding-bottom: 160px;
 
   &__container {
     display: flex;
@@ -64,6 +65,10 @@
 
   &__image {
     position: relative;
+
+    picture {
+      display: flex;
+    }
   }
 
   &__round {

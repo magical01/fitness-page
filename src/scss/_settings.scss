@@ -116,7 +116,14 @@ a {
   font-weight: 600;
   font-size: 20px;
   color: var(--white-color);
+  background: transparent;
   background-color: var(--black-color);
+  transition: all .4s;
+
+  @include hover {
+    color: var(--black-color);
+    background: linear-gradient(93.5deg, #DDFF51 4.85%, rgba(206, 255, 6, 0.89) 89.25%);
+  }
 }
 
 .btn--white {
@@ -127,4 +134,20 @@ a {
   font-size: 20px;
   color: var(--black-color);
   background-color: transparent;
+  transition: all .3s;
+
+  @include hover {
+    border: 1px solid var(--green-color);
+  }
+}
+
+.main-title {
+  margin: 0;
+  font-family: 'FuturaPT';
+  font-weight: 600;
+  font-size: 60px;
+  text-align: center;
+  text-transform: uppercase;
+
+
 }
