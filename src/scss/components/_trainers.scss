@@ -1,0 +1,181 @@
+.trainers {
+  padding-bottom: 160px;
+
+  &__title {
+    span {
+      color: var(--green-color);
+    }
+  }
+
+  &__slider {
+    margin-top: 65px;
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__image {
+    position: relative;
+
+    picture {
+      display: flex;
+    }
+  }
+
+  &__round {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -1px;
+    right: -54px;
+    z-index: 100;
+    animation: 6s linear 0s infinite round-text-animation;
+  }
+
+  &__letter {
+    position: absolute;
+    left: 50px;
+    font-family: "Muller";
+    font-weight: 400;
+    font-size: 15.3484px;
+    width: 11px;
+    line-height: 23px;
+    transform-origin: 0 50px;
+    color: var(--green-color);
+  }
+
+  &__play {
+    position: absolute;
+    top: 34px;
+    right: -19px;
+
+    svg {
+      width: 27px;
+      height: 27px;
+      path {
+        fill: var(--green-color);
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 60px;
+
+    strong {
+      display: block;
+      font-weight: 500;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    span {
+      display: block;
+      margin-top: 10px;
+      font-weight: 400;
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+}
+
+.trainers-btn-prev {
+  position: absolute;
+  top: 33%;
+  left: 219px;
+  z-index: 50;
+
+  svg circle {
+    fill: transparent;
+    transition: all .3s;
+  }
+
+  svg g {
+    transition: all .3s;
+  }
+
+  @include hover {
+    svg circle {
+      fill: rgba(206, 255, 6, 1);
+      stroke: transparent;
+    }
+
+    svg g {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    svg circle {
+      fill: rgba(206, 255, 6, 1);
+      stroke: transparent;
+    }
+
+    svg g {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    svg circle {
+      fill: rgba(206, 255, 6, 1);
+      stroke: transparent;
+    }
+
+    svg g {
+      opacity: 1;
+    }
+  }
+}
+
+
+.trainers-btn-next {
+  position: absolute;
+  top: 33%;
+  right: 219px;
+  z-index: 50;
+
+  svg circle {
+    fill: transparent;
+    transition: all .3s;
+  }
+
+  svg g {
+    transition: all .3s;
+  }
+
+  @include hover {
+    svg circle {
+      fill: rgba(206, 255, 6, 1);
+      stroke: transparent;
+    }
+
+    svg g {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    svg circle {
+      fill: rgba(206, 255, 6, 1);
+      stroke: transparent;
+    }
+
+    svg g {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    svg circle {
+      fill: rgba(206, 255, 6, 1);
+      stroke: transparent;
+    }
+
+    svg g {
+      opacity: 1;
+    }
+  }
+}

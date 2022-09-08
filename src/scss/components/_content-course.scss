@@ -35,8 +35,12 @@
     color: var(--white-color);
   }
 
+  &__inner {
+    animation: 12s linear 0s infinite sphere-scale ;
+  }
+
   &__picture {
-    animation: 12s linear 0s infinite sphere-rotate ;
+    animation: 18s linear 0s infinite sphere-rotate ;
   }
 
 }
@@ -100,5 +104,17 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes sphere-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }

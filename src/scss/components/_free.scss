@@ -1,0 +1,91 @@
+.free {
+  padding-bottom: 160px;
+
+
+  &__text {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    opacity: 0.6;
+  }
+
+  &__trains {
+    display: inline-block;
+    padding: 16px 43px;
+  }
+
+  &__tariffs {
+    margin-left: 20px;
+    display: inline-block;
+    padding: 15px 46px;
+  }
+
+  &__center {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+  }
+
+  &__image {
+    position: relative;
+  }
+
+  &__picture {
+    display: flex;
+  }
+
+  &__img {
+    display: flex;
+  }
+
+  &__background {
+    content: "";
+    position: absolute;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 30, 31, 0.16);
+    backdrop-filter: blur(7px);
+  }
+
+  &__round {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 40%;
+    left: 39%;
+    z-index: 100;
+    animation: 6s linear 0s infinite round-text-animation;
+  }
+
+  &__letter {
+    position: absolute;
+    left: 65px;
+    font-family: "Muller";
+    font-weight: 400;
+    font-size: 18.1391px;
+    transform-origin: 0 65px;
+    color: var(--white-color);
+  }
+
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    svg {
+      width: 44px;
+      height: 44px;
+      path {
+        fill: var(--green-color);
+      }
+    }
+  }
+
+  &__buttons {
+    margin-top: 60px;
+    text-align: center;
+
+  }
+}

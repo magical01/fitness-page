@@ -1,1 +1,2 @@
-import './components/hero-round-letters'
+import './components/round-letters'
+import './components/trainers-slider'
