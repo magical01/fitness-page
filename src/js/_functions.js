@@ -84,3 +84,8 @@ console.log(mobileCheck())
 // };
 
 // validateForms('.form-1', rules1, afterForm);
+
+// запуск анимации при скролле до блока с data атрибутом data-scroll=progressbar-animation
+import * as progressBarAnimationModule from "./components/progressbar-animation.js";
+progressBarAnimationModule.default();
+
