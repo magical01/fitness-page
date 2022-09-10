@@ -1,0 +1,133 @@
+.questions {
+  padding-top: 160px;
+  padding-bottom: 160px;
+
+  &__container {
+    padding: 0 185px;
+  }
+
+  &__title {
+    max-width: 757px;
+    line-height: 77px;
+    text-align: start;
+    span {
+      display: inline-block;
+      color: var(--green-color);
+    }
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+  margin-top: 65px;
+
+  &__item {
+    width: 45%;
+    cursor: pointer;
+
+    &--active {
+      .accordion__title {
+        font-style: italic;
+      }
+
+      .accordion__btn {
+        border-radius: 50%;
+        background-color: var(--green-color);
+
+        &::before {
+          transform: rotate(-45deg);
+        }
+
+        &::after {
+          transform: rotate(45deg);
+        }
+      }
+
+      .dropdown {
+        display: block;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--black-color);
+    transition: all .3s;
+  }
+
+  &__btn {
+    position: relative;
+    width: 29px;
+    height: 29px;
+    background-color: transparent;
+    transition: all .3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 21%;
+      top: 49%;
+      display: inline-block;
+      width: 16px;
+      height: 1px;
+      background-color: var(--black-color);
+      transition: all .3s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 21%;
+      top: 49%;
+      display: inline-block;
+      width: 16px;
+      height: 1px;
+      background-color: var(--black-color);
+      transform: rotate(90deg);
+      transition: all .3s;
+    }
+  }
+}
+
+.dropdown {
+  display: none;
+  margin-top: 24px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+
+  span {
+    display: block;
+  }
+
+  &__list {
+    margin-top: -1px;
+    padding-left: 6px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 38%;
+      left: 3px;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background-color: var(--black-color);
+    }
+  }
+}

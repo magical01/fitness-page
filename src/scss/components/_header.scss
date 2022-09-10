@@ -30,7 +30,7 @@
 
   &__item {
     font-size: 18px;
-    color: rgba(#1e1e1f, 0.6);
+    color: rgba(30, 30, 31, 0.6);
   }
 
   &__item + &__item {
@@ -39,22 +39,25 @@
 
   &__link {
     position: relative;
+    padding-left: 4px;
+    padding-right: 4px;
 
-    &--active {
-      padding-left: 4px;
-      padding-right: 4px;
-      color: rgba(#1e1e1f, 0.8);
+    &:before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 0;
+      z-index: -1;
+      width: 0%;
+      height: 8px;
+      background: linear-gradient(93.5deg, #DDFF51 4.85%, rgba(206, 255, 6, 0.89) 89.25%);
+      transition: all .3s;
+    }
 
-
+    &:hover {
+      color: rgba(30, 30, 31, 0.79);
       &:before {
-        content: "";
-        position: absolute;
-        top: 15px;
-        left: 0;
-        z-index: -1;
         width: 100%;
-        height: 8px;
-        background: linear-gradient(93.5deg, #DDFF51 4.85%, rgba(206, 255, 6, 0.89) 89.25%);
       }
     }
   }

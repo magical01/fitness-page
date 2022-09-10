@@ -26,12 +26,30 @@
     height: 726px;
     background-color: var(--black-color);
 
-    picture {
+    .reviews__smile {
       position: absolute;
       display: flex;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+  }
+
+  &__heart {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    animation: 7s linear 0s infinite heart-scale;
+
+    &--left {
+      top: 32.5%;
+      left: 25.8%;
+    }
+
+    &--right {
+      top: 32.5%;
+      left: 42.8%;
     }
   }
 
@@ -54,11 +72,23 @@
     stroke-width: 36;
     transform: translate(20px, 20px);
     transform-origin: center;
-    transition: all 3s;
+    transition: all 4s;
   }
 
   &__link {
     padding: 17px 55px;
+  }
+}
+
+@keyframes heart-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.28);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 

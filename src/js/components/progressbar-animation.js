@@ -1,6 +1,6 @@
 import * as circleAnimModule from "./circle-anim.js";
 
-const selector = "[data-scroll=progressbar-animation]";
+const selector = "[data-scrolling=progressbar-animation]";
 const MARGIN = 200;
 
 function getElementOffset(element) {
