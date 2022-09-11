@@ -15,17 +15,51 @@
       color: var(--green-color);
     }
   }
+
+  &__box--end {
+    margin-top: 80px;
+    text-align: end;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 16px 65px;
+  }
+
+  &__content {
+    display: flex;
+    column-gap: 19px;
+    margin-top: 84px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    width: 44.6%;
+    row-gap: 36px;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+    width: calc(100% - 44.6% - 19px);
+  }
+
+  &__item {
+    cursor: pointer;
+  }
 }
 
 .accordion {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 30px;
-  row-gap: 30px;
-  margin-top: 65px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // column-gap: 19px;
+  // row-gap: 36px;
+  // margin-top: 65px;
 
   &__item {
-    width: 45%;
+    width: 48%;
     cursor: pointer;
 
     &--active {
@@ -47,7 +81,8 @@
       }
 
       .dropdown {
-        display: block;
+        padding-top: 24px;
+        opacity: 1;
       }
     }
   }
@@ -100,11 +135,16 @@
 }
 
 .dropdown {
-  display: none;
-  margin-top: 24px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
   font-weight: 300;
   font-size: 14px;
   line-height: 21px;
+  will-change: max-height;
+  transition: all .3s ease-in-out;
 
   span {
     display: block;

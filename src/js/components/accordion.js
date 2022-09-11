@@ -1,10 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const accordion = document?.querySelectorAll('.accordion__item');
+  const accordion = document?.querySelectorAll('.questions__item');
 
-  accordion.forEach((elem, i) => {
+  accordion.forEach((elem) => {
     elem?.addEventListener('click', (e) => {
-      if (e.currentTarget.closest('.accordion__item')) {
-        e.currentTarget.classList.toggle('accordion__item--active')
+      const self = e.currentTarget;
+      const dropdown = self?.querySelector('.dropdown')
+
+      self.classList.toggle('accordion__item--active');
+
+      if (self.classList.contains('accordion__item--active')) {
+        dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+      } else {
+        dropdown.style.maxHeight = null;
       }
     })
   })

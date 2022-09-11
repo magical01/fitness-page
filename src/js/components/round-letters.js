@@ -12,6 +12,7 @@ function initRoundedLetters(mainSelector, count, selector) {
 
 initRoundedLetters('round__text', 3, 'hero__letter');
 initRoundedLetters('free__letters', 2, 'free__letter');
+initRoundedLetters('trial__letters', 2, 'trial__letter');
 
 function initTrainersRoundedLetters() {
   let container = document.querySelectorAll('.trainers__letters');

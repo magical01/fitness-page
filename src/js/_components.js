@@ -1,6 +1,6 @@
-import './components/smooth-scroll'
 import './components/round-letters'
 import './components/trainers-slider'
 import './components/circle-anim'
 import './components/aos'
 import './components/accordion'
+import './components/marathon-circle'

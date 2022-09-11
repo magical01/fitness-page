@@ -56,6 +56,16 @@
     left: 39%;
     z-index: 100;
     animation: 6s linear 0s infinite round-text-animation;
+
+    // &-box {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   height: 100%;
+    //   width: 100%;
+    // }
+
   }
 
   &__letter {

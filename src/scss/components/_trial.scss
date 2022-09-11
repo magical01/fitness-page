@@ -1,0 +1,62 @@
+.trial {
+  padding-bottom: 160px;
+
+  &__title {
+    color: var(--green-color);
+  }
+
+  &__content {
+    display: flex;
+    margin-top: 60px;
+    column-gap: 95px;
+  }
+
+  &__left {
+    width: 476px;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__round {
+    top: 36%;
+    left: 36%;
+  }
+
+  &__right {
+    padding-top: 121px;
+    width: calc(100% - 476px - 95px);
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 35px;
+    color: rgba(30, 30, 31, 0.6);
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+
+  &__train {
+    padding: 16px 49px;
+  }
+
+  &__programm {
+    padding: 16px 36px;
+  }
+
+
+  &__letter {
+    position: absolute;
+    left: 65px;
+    font-family: "Muller";
+    font-weight: 400;
+    font-size: 18px;
+    transform-origin: 0 65px;
+    color: var(--white-color);
+  }
+}
