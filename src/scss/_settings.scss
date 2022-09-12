@@ -124,7 +124,19 @@ a {
   background-color: var(--black-color);
   transition: all .4s;
 
-  @include hover {
+  &:hover {
+    color: var(--black-color);
+    background: linear-gradient(93.5deg, #DDFF51 4.85%, rgba(206, 255, 6, 0.89) 89.25%);
+  }
+
+  &:focus {
+    outline: none;
+    color: var(--black-color);
+    background: linear-gradient(93.5deg, #DDFF51 4.85%, rgba(206, 255, 6, 0.89) 89.25%);
+  }
+
+  &:active {
+    outline: none;
     color: var(--black-color);
     background: linear-gradient(93.5deg, #DDFF51 4.85%, rgba(206, 255, 6, 0.89) 89.25%);
   }
@@ -141,7 +153,16 @@ a {
   background-color: transparent;
   transition: all .3s;
 
-  @include hover {
+  &:hover {
+    border: 1px solid var(--green-color);
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--green-color);
+  }
+
+  &:active {
     border: 1px solid var(--green-color);
   }
 }

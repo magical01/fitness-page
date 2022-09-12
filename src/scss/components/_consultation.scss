@@ -96,11 +96,27 @@
     color: var(--white-color);
     background-color: rgba(255, 255, 255, 0.35);
     border-radius: 39px;
+    transition: all .3s;
 
     &::placeholder {
       font-weight: 300;
       font-size: 28px;
       color: rgba(255, 255, 255, 0.7);
+      transition: all .3s;
+    }
+
+    &:focus {
+      outline: none;
+
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+
+    &:active {
+      &::placeholder {
+        opacity: 0;
+      }
     }
 
   }
@@ -114,7 +130,21 @@
     font-size: 32px;
     line-height: 36px;
     color: var(--black-color);
-    background-color: #FFFFFF;
+    background-color: var(--white-color);
+    transition: all .3s;
+
+    &:hover {
+      background-color: var(--green-color);
+    }
+
+    &:focus {
+      outline: none;
+      background-color: var(--green-color);
+    }
+
+    &:active {
+      background-color: var(--green-color);
+    }
   }
 }
 
@@ -129,8 +159,6 @@
 
   &__input {
     position: absolute;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     transition: all .3s;
 
