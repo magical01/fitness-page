@@ -1,5 +1,10 @@
 .for {
   padding-bottom: 172px;
+
+  &__container {
+    position: relative;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
