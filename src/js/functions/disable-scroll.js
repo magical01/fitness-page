@@ -3,7 +3,7 @@ import vars from '../_vars';
 export const disableScroll = () => {
   const fixBlocks = document?.querySelectorAll('.fixed-block');
   const pagePosition = window.scrollY;
-  const paddingOffset = `${(window.innerWidth - vars.bodyEl.offsetWidth)}px`;
+  const paddingOffset = `0px`;
 
   vars.htmlEl.style.scrollBehavior = 'none';
   fixBlocks.forEach(el => { el.style.paddingRight = paddingOffset; });

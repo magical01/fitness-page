@@ -1,8 +1,10 @@
 .for {
   padding-bottom: 172px;
 
+
   &__container {
     position: relative;
+
   }
 
   &__list {
@@ -10,6 +12,10 @@
     flex-direction: column;
     margin-top: 40px;
     max-height: 1355px;
+
+    @include small-tablet {
+      max-height: 1169px;
+    }
   }
 
   &__item {
@@ -19,15 +25,24 @@
     flex-direction: column;
     width: 460px;
 
+    @include small-tablet {
+      width: 370px;
+    }
 
-    .for__image picture{
+
+    .for__image picture {
       img {
         transition: all .5s;
+
+        @include small-tablet {
+          width: 250px;
+        }
+
       }
     }
 
-    @include hover {
-      .for__image picture img{
+    &:hover {
+      .for__image picture img {
         transform: rotate(15deg);
       }
 
@@ -84,6 +99,10 @@
 
       .for__text {
         width: 100%;
+
+        @include small-tablet {
+          width: 370px;
+        }
       }
     }
 
@@ -94,6 +113,12 @@
       .for__img {
         transform: translateY(10px);
       }
+
+      @include small-tablet {
+        .for__text {
+          width: 301px;
+        }
+      }
     }
 
     &:nth-of-type(5) {
@@ -102,6 +127,14 @@
 
       .for__text {
         width: 370px;
+
+        @include small-tablet {
+          width: 280px;
+        }
+      }
+
+      @include tablet {
+        align-self: flex-start;
       }
 
     }
@@ -118,6 +151,12 @@
     span {
       transition: all .3s;
     }
+
+    @include small-tablet {
+      width: 370px;
+      font-size: 20px;
+    }
+
   }
 
   &__picture {

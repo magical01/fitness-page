@@ -90,6 +90,18 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+
+  @include big-desktop {
+    padding: 0px 50px;
+  }
+
+  @include tablet {
+    padding: 0 25px;
+  }
+
+  @include small-tablet {
+    // padding: 0 15px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -174,6 +186,10 @@ a {
   font-size: 60px;
   text-align: center;
   text-transform: uppercase;
+
+  @include small-tablet {
+    font-size: 48px;
+  }
 }
 
 .scroll-top {

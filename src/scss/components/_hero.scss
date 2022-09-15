@@ -2,13 +2,90 @@
   padding-top: 100px;
   padding-bottom: 160px;
 
+  @include xl {
+    padding-top: 30px;
+  }
+
+  @include small-tablet {
+    padding-top: 20px;
+  }
+
   &__container {
     display: flex;
-    justify-content: space-between;
+
+    @include xxl {
+      justify-content: space-between;
+    }
+
+    @include xl {
+      flex-direction: column;
+    }
   }
 
   &__text {
+    margin-right: 10%;
     padding-top: 65px;
+    width: 49.3%;
+
+    @include xxl {
+      margin-right: 0%;
+    }
+
+    @include xl {
+      margin-bottom: 90px;
+      padding-top: 0;
+      width: 70%;
+    }
+
+    @include small-tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
+  }
+
+
+  &__image {
+    position: relative;
+    width: calc(100% - 49.3% - 10%);
+
+    @include xl {
+      width: fit-content;
+    }
+
+    @include small-tablet {
+      width: 85%;
+    }
+
+    @include mobile {
+    }
+
+    picture {
+      display: flex;
+
+      img {
+        @include xl {
+          width: 619px;
+          height: 500px;
+          object-fit: cover;
+        }
+
+        @include tablet {
+          width: 100%;
+          // height: auto;
+        }
+
+        @include small-tablet {
+          height: 498px;
+        }
+
+        @include mobile {
+          height: auto;
+        }
+      }
+    }
   }
 
   &__date {
@@ -16,14 +93,29 @@
     margin-bottom: 22px;
     font-weight: 500;
     font-size: 20px;
+
+    @include small-tablet {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    @include mini-mobile {
+      font-size: 12px;
+    }
   }
 
   &__subject {
     display: flex;
-    width: 500px;
   }
 
   &__title {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     margin-bottom: 40px;
     font-family: "FuturaPT";
@@ -31,9 +123,24 @@
     font-size: 48px;
     line-height: 50px;
 
-    span {
+
+    @include small-tablet {
+      font-size: 48px;
+      margin-bottom: 25px;
+    }
+
+    @include mobile {
+      margin-bottom: 10px;
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    @include mini-mobile {
+      font-size: 26px;
+    }
+
+    &--green {
       display: inline-block;
-      margin-right: 30px;
       color: rgba(221, 255, 81, 1);
     }
   }
@@ -42,33 +149,89 @@
     margin: 0;
     margin-bottom: 50px;
     font-size: 20px;
-    color: rbga(#1E1E1F, 0.8);
+    color: rgba(30, 30, 31, 0.8);
+
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    @include mini-mobile {
+      font-size: 12px;
+    }
   }
 
   &__buttons {
-    display: flex;
-    column-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3%;
+
+    @include xl {
+      display: flex;
+      column-gap: unset;
+    }
   }
 
   &__course {
-    padding: 16px 78px;
+    padding: 16px 30px;
+
+    @include xl {
+      margin-right: 20px;
+      width: 278px;
+    }
+
+    @include small-tablet {
+      margin-right: 15px;
+      width: 43%;
+    }
+
+    @include mobile {
+      margin-right: 10px;
+      padding: 12px 15px;
+      width: 45%;
+      font-size: 16px;
+    }
+
+    @include mini-mobile {
+      margin-right: 5px;
+      padding: 10px 10px;
+      width: 49%;
+      font-size: 14px;
+    }
+
   }
 
   &__programm {
-    padding: 16px 52px;
+    padding: 16px 30px;
+
+    @include xl {
+      width: 278px;
+    }
+
+    @include small-tablet {
+      width: 43%;
+    }
+
+    @include mobile {
+      padding: 12px 15px;
+      width: 45%;
+      font-size: 16px;
+    }
+
+    @include mini-mobile {
+      width: calc(49% - 5px);
+      padding: 10px 10px;
+      font-size: 12px;
+    }
   }
 
   &__picture {
     filter: drop-shadow(0px 0px 49px #CEFF06);
     border-radius: 10px;
-  }
-
-  &__image {
-    position: relative;
-
-    picture {
-      display: flex;
-    }
   }
 
   &__round {
@@ -77,25 +240,38 @@
     height: 100px;
     top: -50px;
     left: -50px;
-    z-index: 100;
+    z-index: 5;
     animation: 6s linear 0s infinite round-text-animation;
+
+    @include xl {
+      left: auto;
+      right: -43px;
+    }
   }
 
   &__letter {
     display: block;
     position: absolute;
+    z-index: 5;
     top: -25px;
     left: 50px;
     font-weight: 500;
     font-size: 20px;
     transform-origin: 0 74px;
+
+    @include mobile {
+      font-size: 16px;
+
+    }
+
   }
 
   &__play {
     position: absolute;
     top: -19px;
     left: -11px;
-    z-index: 200;
+    z-index: 5;
+
 
     svg path {
       transition: all .3s;
@@ -105,6 +281,12 @@
       svg path {
         fill: rgba(206, 255, 6, 0.89);
       }
+    }
+
+    @include xl {
+      left: auto;
+      right: -15px;
+
     }
   }
 }
