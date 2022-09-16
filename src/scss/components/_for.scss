@@ -4,7 +4,7 @@
 
   &__container {
     position: relative;
-
+    overflow: hidden;
   }
 
   &__list {
@@ -15,6 +15,13 @@
 
     @include small-tablet {
       max-height: 1169px;
+    }
+
+    @include xl-mobile {
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      flex-direction: row;
+      max-height: none;
     }
   }
 
@@ -27,6 +34,10 @@
 
     @include small-tablet {
       width: 370px;
+    }
+
+    @include xl-mobile {
+      flex-basis: 50%;
     }
 
 
@@ -50,16 +61,31 @@
         .for__ellipse--one {
           width: 200px;
           height: 200px;
+
+          @include xl-mobile {
+            width: 80%;
+            height: 80%;
+          }
         }
 
         .for__ellipse--two {
           width: 257px;
           height: 257px;
+
+          @include xl-mobile {
+            width: 90%;
+            height: 90%;
+          }
         }
 
         .for__ellipse--three {
           width: 307px;
           height: 307px;
+
+          @include xl-mobile {
+            width: 100%;
+            height: 100%;
+          }
         }
       }
 
@@ -76,6 +102,14 @@
 
       .for__img {
         transform: translateY(15px);
+
+        @include xl-mobile {
+          transform: translateY(0px);
+        }
+      }
+
+      @include xl-mobile {
+        transform: translate(0px, 0px);
       }
     }
 
@@ -85,6 +119,14 @@
 
       .for__img {
         transform: translateY(-33px);
+
+        @include xl-mobile {
+          transform: translateY(0px);
+        }
+      }
+
+      @include xl-mobile {
+        transform: translate(0px, 0px);
       }
     }
 
@@ -95,6 +137,15 @@
 
       .for__img {
         transform: translateY(-22px);
+
+        @include xl-mobile {
+          transform: translateY(0px);
+        }
+      }
+
+      @include xl-mobile {
+        width: auto;
+        transform: translate(0px, 0px);
       }
 
       .for__text {
@@ -103,6 +154,10 @@
         @include small-tablet {
           width: 370px;
         }
+
+        @include xl-mobile {
+          width: auto;
+        }
       }
     }
 
@@ -110,13 +165,27 @@
       align-self: flex-end;
       transform: translate(37px, -463px);
 
+      @include xl-mobile {
+        transform: translate(0px, 0px);
+      }
+
       .for__img {
         transform: translateY(10px);
+
+        @include xl-mobile {
+          transform: translateY(0px);
+        }
       }
 
       @include small-tablet {
         .for__text {
           width: 301px;
+        }
+      }
+
+      @include xl-mobile {
+        .for__text {
+          width: auto;
         }
       }
     }
@@ -125,16 +194,29 @@
       align-self: center;
       transform: translate(1px, -454px);
 
+      @include xl-mobile {
+        transform: translate(0px, 0px);
+      }
+
       .for__text {
         width: 370px;
 
         @include small-tablet {
           width: 280px;
         }
+
+        @include xl-mobile {
+          width: auto;
+        }
       }
 
       @include tablet {
         align-self: flex-start;
+      }
+
+      @include xl-mobile {
+        align-self: center;
+        flex-basis: 50%;
       }
 
     }
@@ -155,6 +237,15 @@
     @include small-tablet {
       width: 370px;
       font-size: 20px;
+    }
+
+    @include xl-mobile {
+      width: auto;
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 12px;
     }
 
   }
