@@ -9,6 +9,7 @@
 
   @include small-tablet {
     padding-top: 20px;
+    padding-bottom: 80px;
   }
 
   &__container {
@@ -292,11 +293,11 @@
   }
 }
 
-@keyframes round-text-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+// @keyframes round-text-animation {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }

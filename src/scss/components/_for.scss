@@ -2,6 +2,10 @@
   padding-bottom: 172px;
 
 
+  @include small-tablet {
+    padding-bottom: 80px;
+  }
+
   &__container {
     position: relative;
     overflow: hidden;

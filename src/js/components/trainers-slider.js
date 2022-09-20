@@ -7,5 +7,16 @@ const swiper = new Swiper('.trainers__slider', {
   navigation: {
     nextEl: '.trainers-btn-next',
     prevEl: '.trainers-btn-prev'
+  },
+  speed: 600,
+  breakpoints: {
+    1025: {
+      slidesPerView: '3'
+    },
+
+    320: {
+      slidesPerView: '1'
+    }
   }
+
 });

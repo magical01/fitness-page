@@ -1,6 +1,10 @@
 .trainers {
   padding-bottom: 160px;
 
+  @include small-tablet {
+    padding-bottom: 80px;
+  }
+
   &__container {
     position: relative;
   }
@@ -12,6 +16,8 @@
   }
 
   &__slider {
+    display: flex;
+    justify-content: space-between;
     margin-top: 65px;
   }
 
@@ -19,11 +25,22 @@
     display: flex;
     justify-content: center;
     cursor: pointer;
-
   }
 
   &__content {
     position: relative;
+
+    @include tablet {
+      width: 350px !important;
+    }
+
+    @include mobile {
+      width: 250px !important;
+    }
+
+    @include mini-mobile {
+      width: 200px !important;
+    }
   }
 
   &__image {
@@ -75,12 +92,28 @@
   &__text {
     margin-top: 60px;
 
+    @include mobile {
+      margin-top: 20px;
+    }
+
     strong {
       display: block;
       font-weight: 500;
       font-size: 30px;
       text-align: center;
       transition: all .3s;
+
+      @include tablet {
+        font-size: 24px;
+      }
+
+      @include mobile {
+        font-size: 20px;
+      }
+
+      @include mini-mobile {
+        font-size: 18px;
+      }
 
       &:hover {
         font-style: italic;
@@ -94,21 +127,61 @@
       font-weight: 400;
       font-size: 24px;
       text-align: center;
+
+      @include tablet {
+        font-size: 20px;
+      }
+
+      @include mobile {
+        font-size: 14px;
+      }
+
+      @include mini-mobile {
+        font-size: 12px;
+      }
     }
 
   }
 
-  // &__buttons {
-  //   position: relative;
-  //   top: 50%;
-  // }
+  &__buttons {
+    position: relative;
+
+  }
 }
 
 .trainers-btn-prev {
   position: absolute;
-  top: 343px;
-  left: 353px;
+  top: 274px;
+  left: 219px;
   z-index: 50;
+
+  @include xxl {
+    left: 15%;
+  }
+
+  @include tablet {
+    left: 5%;
+  }
+
+
+  @include small-tablet {
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @include mobile {
+    top: 170px;
+    left: 0%;
+  }
+
+  @include mini-mobile {
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
 
   svg circle {
     fill: transparent;
@@ -156,9 +229,36 @@
 
 .trainers-btn-next {
   position: absolute;
-  top: 343px;
-  right: 351px;
+  top: 274px;
+  right: 219px;
   z-index: 50;
+
+  @include xxl {
+    right: 15%;
+  }
+
+  @include tablet {
+    right: 5%;
+  }
+
+  @include small-tablet {
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @include mobile {
+    top: 170px;
+    right: 0%;
+  }
+
+  @include mini-mobile {
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
 
   svg circle {
     fill: transparent;
@@ -207,27 +307,51 @@
   opacity: 0.6;
   transition: all .3s;
 
+  @include tablet {
+    opacity: 1;
+  }
+
   .trainers__round {
     display: none;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   .trainers__play {
     display: none;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   .trainers__text {
     display: none;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   .trainers__content {
     width: 322px;
     transform: rotate(-13deg);
     transition: all .3s;
+
+    @include tablet {
+      transform: rotate(0);
+    }
   }
 
   .trainers__image {
-    transform: translate(25px, 140px);
+    transform: translate(-70%, 140px);
     transition: all .3s;
+
+    @include tablet {
+      transform: translate(0, 0);
+    }
   }
 }
 
@@ -235,26 +359,52 @@
   opacity: 0.6;
   transition: all .3s;
 
+  @include tablet {
+    opacity: 1;
+  }
+
   .trainers__round {
     display: none;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   .trainers__play {
     display: none;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   .trainers__text {
     display: none;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   .trainers__content {
     width: 322px;
     transform: rotate(13deg);
     transition: all .3s;
+
+    @include tablet {
+      transform: rotate(0);
+
+    }
   }
 
   .trainers__image {
-    transform: translate(-23px, 140px);
+    transform: translate(70%, 140px);
     transition: all .3s;
+
+    @include tablet {
+      transform: translate(0, 0);
+    }
   }
 }
+

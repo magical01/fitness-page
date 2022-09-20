@@ -3,8 +3,8 @@ let radius;
 let circumference;
 
 document.addEventListener("DOMContentLoaded", () => {
-  circle = document.querySelector(".reviews__progressbar");
-  radius = circle.r.baseVal.value;
+  circle = document?.querySelector(".reviews__progressbar");
+  radius = circle?.r.baseVal.value;
   circumference = 2 * Math.PI * radius;
 
   circle.style.strokeDasharray = `${circumference} ${circumference}`;

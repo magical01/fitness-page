@@ -99,8 +99,12 @@ a {
     padding: 0 25px;
   }
 
-  @include small-tablet {
-    // padding: 0 15px;
+  @include mobile {
+    padding: 0 15px;
+  }
+
+  @include mini-mobile {
+    padding: 0 10px;
   }
 }
 
@@ -194,6 +198,10 @@ a {
   @include mobile {
     font-size: 40px;
   }
+
+  @include mini-mobile {
+    font-size: 32px;
+  }
 }
 
 .scroll-top {
@@ -240,5 +248,15 @@ a {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
+  }
+
+  @include small-tablet {
+    width: 60px;
+    height: 60px;
+
+    &::before {
+      width: 25px;
+      height: 25px;
+    }
   }
 }
