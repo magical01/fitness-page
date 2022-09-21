@@ -1,5 +1,10 @@
 .reviews {
   padding-bottom: 160px;
+
+  @include small-tablet {
+    padding-bottom: 80px;
+  }
+
   &__title {
     font-weight: 450;
     font-size: 60px;
@@ -25,6 +30,7 @@
     width: 726px;
     height: 726px;
     background-color: var(--black-color);
+
 
     .reviews__smile {
       position: absolute;
@@ -61,6 +67,11 @@
     height: 676px;
     // transform: translate(-50%, -50%);
     transform: rotate(-90deg);
+
+    // @include tablet {
+    //   width: 500px;
+    //   height: 500px;
+    // }
   }
 
   &__progressbar {

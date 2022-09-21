@@ -132,7 +132,7 @@ a {
 
 .btn--black {
   display: inline-block;
-  border-radius: 28.5px;
+  border-radius: 29px;
   font-weight: 600;
   font-size: 20px;
   color: var(--white-color);
@@ -156,12 +156,21 @@ a {
     color: var(--black-color);
     background: linear-gradient(93.5deg, #DDFF51 4.85%, rgba(206, 255, 6, 0.89) 89.25%);
   }
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include mini-mobile {
+    padding: 10px 10px;
+    font-size: 12px;
+  }
 }
 
 .btn--white {
   display: inline-block;
   border: 1px solid #1E1E1F;
-  border-radius: 28.5px;
+  border-radius: 29px;
   font-weight: 500;
   font-size: 20px;
   color: var(--black-color);
@@ -181,6 +190,15 @@ a {
   &:active {
     border: 1px solid var(--green-color);
   }
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include mini-mobile {
+    padding: 10px 10px;
+    font-size: 12px;
+  }
 }
 
 .main-title {
@@ -192,12 +210,9 @@ a {
   text-transform: uppercase;
 
   @include small-tablet {
-    font-size: 48px;
-  }
-
-  @include mobile {
     font-size: 40px;
   }
+
 
   @include mini-mobile {
     font-size: 32px;

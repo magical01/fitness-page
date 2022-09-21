@@ -1,6 +1,9 @@
 .free {
   padding-bottom: 160px;
 
+  @include small-tablet {
+    padding-bottom: 80px;
+  }
 
   &__text {
     display: block;

@@ -1,9 +1,20 @@
 .tariffs {
   padding-bottom: 160px;
+
+  @include small-tablet {
+    padding-bottom: 80px;
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
     margin-top: 150px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 80px;
+    }
   }
   &__item {
     width: 377px;
@@ -11,6 +22,30 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include xxl {
+      flex-basis: 32.5%;
+    }
+
+    @include tablet {
+      flex-basis: auto;
+      height: 764px;
+    }
+
+    @include mobile {
+      height: 800px;
+    }
+
+
+    @include mini-mobile {
+      width: 95%;
+    }
+  }
+
+  &__item + &__item {
+    @include tablet {
+      margin-top: 95px;
+    }
   }
 }
 
@@ -18,6 +53,14 @@
   position: relative;
   padding: 32px 0px 48px 27px;
   cursor: pointer;
+
+  @include small-tablet {
+    padding-bottom: 44px;
+  }
+
+  @include mobile {
+    padding: 15px 0px 44px 20px;
+  }
 
   &__sale {
     position: absolute;
@@ -31,6 +74,10 @@
     color: var(--white-color);
     background-color: var(--black-color);
     transform: rotate(20.34deg);
+
+    @include small-tablet {
+      font-size: 30px;
+    }
   }
 
   &__title {
@@ -40,6 +87,10 @@
     font-weight: 450;
     font-size: 28px;
     color: var(--black-color);
+
+    @include small-tablet {
+      font-size: 24px;
+    }
   }
 
 
@@ -47,18 +98,31 @@
     font-weight: 500;
     font-size: 20px;
 
+    @include small-tablet {
+      font-size: 18px;
+    }
+
     span {
       display: inline-block;
       padding: 0 6px;
       font-family: 'FuturaPT', sans-serif;
       font-weight: 600;
       font-size: 60px;
+
+      @include small-tablet {
+        font-size: 54px;
+      }
     }
   }
 
   &__installment {
+    display: block;
     font-size: 12px;
     opacity: 0.8;
+
+    @include small-tablet {
+      font-size: 11px;
+    }
   }
 
   &__fullprices {
@@ -68,6 +132,10 @@
     font-weight: 500;
     font-size: 14px;
     color: var(--black-color);
+
+    @include small-tablet {
+      font-size: 13px;
+    }
   }
 
   &__price-box {
@@ -97,13 +165,16 @@
     display: block;
     font-weight: 600;
     font-size: 14px;
+
+    @include small-tablet {
+      font-size: 13px;
+    }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     margin-top: 25px;
-    // padding-left: 17px;
   }
 
   &__item {
@@ -141,6 +212,10 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+
+    @include small-tablet {
+      font-size: 11px;
+    }
   }
 
   &__btn--centered {
@@ -151,6 +226,11 @@
   &__btn {
     padding: 15px 48px;
     font-weight: 600;
+
+    @include small-tablet {
+      padding: 14px 44px;
+      font-size: 18px;
+    }
   }
 }
 
