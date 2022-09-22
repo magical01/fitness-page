@@ -5,9 +5,24 @@
     padding-bottom: 80px;
   }
 
+  &__container {
+    overflow: hidden;
+    // @include small-tablet {
+    //   padding: 0;
+    // }
+  }
+
   &__title {
     font-weight: 450;
     font-size: 60px;
+
+    @include small-tablet {
+      font-size: 40px;
+    }
+
+    @include mini-mobile {
+      font-size: 32px;
+    }
 
     span {
       font-weight: 600;
@@ -19,14 +34,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 62px;
     width: 100%;
     margin-top: 67px;
+
   }
 
   &__circle--black {
     position: relative;
     border-radius: 50%;
+    margin-bottom: 62px;
     width: 726px;
     height: 726px;
     background-color: var(--black-color);
@@ -38,6 +54,12 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+
+    @include small-tablet {
+      // border-radius: 0%;
+      // width: 100%;
+      display: none;
     }
   }
 
@@ -60,6 +82,7 @@
   }
 
   &__circle {
+    content: "";
     position: absolute;
     top: 27px;
     left: 24px;
@@ -72,6 +95,7 @@
     //   width: 500px;
     //   height: 500px;
     // }
+
   }
 
   &__progressbar {
@@ -84,10 +108,31 @@
     transform: translate(20px, 20px);
     transform-origin: center;
     transition: all 4s;
+
+    @include small-tablet {
+      cx: 48%;
+      cy: 48%;
+      r: 250;
+
+    }
+  }
+
+  &__circle--mobile {
+    display: none;
+
+    @include small-tablet{
+      display: block;
+      margin-bottom: 40px;
+    }
   }
 
   &__link {
     padding: 17px 55px;
+
+
+    @include mobile {
+      padding: 12px 20px;
+    }
   }
 }
 
