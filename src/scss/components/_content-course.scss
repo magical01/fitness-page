@@ -79,13 +79,13 @@
     color: var(--white-color);
   }
 
-  // &__inner {
-  //   animation: 12s linear 0s infinite sphere-scale ;
-  // }
+  &__inner {
+    animation: 12s linear 0s infinite sphere-scale ;
+  }
 
-  // &__picture {
-  //   animation: 18s linear 0s infinite sphere-rotate ;
-  // }
+  &__picture {
+    animation: 18s linear 0s infinite sphere-rotate ;
+  }
 
 }
 

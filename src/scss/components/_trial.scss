@@ -24,17 +24,36 @@
     width: 476px;
 
     @include mobile {
-      width: 90%;
+      width: auto;
     }
+
   }
 
   &__image {
     width: 100%;
+
+    @include mobile {
+      width: 350px;
+    }
+
+    @include mini-mobile {
+      width: 290px;
+    }
   }
 
   &__round {
     top: 36%;
     left: 36%;
+
+    @include mobile {
+      top: 31%;
+      left: 31%;
+    }
+
+    @include mini-mobile {
+      top: 27%;
+      left: 27%;
+    }
   }
 
   &__right {

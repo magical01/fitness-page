@@ -60,6 +60,12 @@
     right: 31px;
     z-index: 100;
     animation: 6s linear 0s infinite round-text-animation;
+
+    @include tablet {
+      top: -3px;
+      right: -1px;
+    }
+
   }
 
   &__letter {
@@ -86,6 +92,11 @@
       path {
         fill: var(--white-color);
       }
+    }
+
+    @include tablet {
+      top: 32px;
+      right: 32px;
     }
   }
 

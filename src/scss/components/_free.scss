@@ -43,6 +43,18 @@
 
   &__image {
     position: relative;
+
+    @include small-tablet {
+      width: 455px;
+    }
+
+    @include mobile {
+      width: 350px;
+    }
+
+    @include mini-mobile {
+      width: 290px;
+    }
   }
 
   &__picture {
@@ -72,15 +84,20 @@
     z-index: 100;
     animation: 6s linear 0s infinite round-text-animation;
 
-    // &-box {
-    //   content: "";
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   height: 100%;
-    //   width: 100%;
-    // }
+    @include small-tablet {
+      top: 36%;
+      left: 35%;
+    }
 
+    @include mobile {
+      top: 31%;
+      left: 31%;
+    }
+
+    @include mini-mobile {
+      top: 27%;
+      left: 27%;
+    }
   }
 
   &__letter {
@@ -102,8 +119,14 @@
     svg {
       width: 44px;
       height: 44px;
+
       path {
         fill: var(--green-color);
+      }
+
+      @include mobile {
+        width: 35px;
+        height: 35px;
       }
     }
   }
