@@ -80,7 +80,6 @@
 
   &__content {
     display: flex;
-    column-gap: 19px;
     margin-top: 84px;
 
     @include xl {
@@ -96,11 +95,13 @@
   &__left {
     display: flex;
     flex-direction: column;
+    margin-right: 19px;
     width: 44.6%;
 
     @include xl {
       width: 100%;
       margin-bottom: 36px;
+      margin-right: 0;
     }
   }
 
@@ -124,19 +125,13 @@
 }
 
 .accordion {
-  // display: flex;
-  // flex-wrap: wrap;
-  // column-gap: 19px;
-  // row-gap: 36px;
-  // margin-top: 65px;
-
   &__item {
     width: 48%;
     cursor: pointer;
 
     &--active {
       .accordion__title {
-        font-style: italic;
+        text-shadow: var(--green-color) -2px 2px 3px;
       }
 
       .accordion__btn {

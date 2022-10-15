@@ -7,9 +7,9 @@
         <picture class="free__picture">
           <source srcset="img/free.avif" type="image/avif">
           <source srcset="img/free.webp" type="image/webp">
-          <img loading="lazy" src="img/free.png" class="free__img" width="615" height="622" alt="">
-          <div class="free__background"></div>
+          <img loading="lazy" src="img/free.png" class="free__img" width="615" height="622" alt="" aria-hidden="true">
         </picture>
+        <div class="free__background"></div>
         <div class="free__round">
           <div class="free__letters">смотреть</div>
         </div>
@@ -23,8 +23,8 @@
       </div>
     </div>
     <div class="free__buttons">
-      <button class="free__trains btn-reset btn--black">Выполнил тренировку</button>
-      <button class="free__tariffs btn-reset btn--white">Перейти к тарифам</button>
+      <button class="free__trains btn-reset btn btn--black">Выполнил тренировку</button>
+      <a class="free__tariffs btn-reset btn btn--white" href="#tariffs">Перейти к тарифам</a>
     </div>
   </div>
 </section>

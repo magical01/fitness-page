@@ -1,6 +1,10 @@
 .tariffs {
   padding-bottom: 160px;
 
+  &__container {
+    overflow: hidden;
+  }
+
   @include small-tablet {
     padding-bottom: 80px;
   }
@@ -33,9 +37,8 @@
     }
 
     @include mobile {
-      height: 800px;
+      height: 730px;
     }
-
 
     @include mini-mobile {
       width: 95%;
@@ -60,6 +63,10 @@
 
   @include mobile {
     padding: 15px 0px 44px 20px;
+  }
+
+  @include mini-mobile {
+    padding: 15px 0px 35px 13px;
   }
 
   &__sale {
@@ -90,6 +97,10 @@
 
     @include small-tablet {
       font-size: 24px;
+    }
+
+    @include mobile {
+      margin-bottom: 5px;
     }
   }
 
@@ -123,6 +134,10 @@
     @include small-tablet {
       font-size: 11px;
     }
+
+    @include mobile {
+      font-size: 10px;
+    }
   }
 
   &__fullprices {
@@ -136,17 +151,23 @@
     @include small-tablet {
       font-size: 13px;
     }
+
+    @include mobile {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
   }
 
   &__price-box {
     margin-left: 1px;
     display: flex;
-    row-gap: 8px;
     flex-direction: column;
   }
 
   &__oldprice {
     position: relative;
+    display: block;
+    margin-bottom: 8px;
     color: rgba(30, 30, 31, 0.6);
 
     &::before {
@@ -183,22 +204,7 @@
     font-weight: 400;
     font-size: 12px;
 
-    &--active {
-      color: var(--black-color);
 
-      .card__item + .card__item {
-        margin-top: 11px;
-      }
-    }
-
-    &--disabled {
-      margin-top: 18px;
-      color: rgba(30, 30, 31, 0.5);
-
-      .card__item + .card__item {
-        margin-top: 11px;
-      }
-    }
 
     &::before {
       content: "";
@@ -215,6 +221,25 @@
 
     @include small-tablet {
       font-size: 11px;
+    }
+  }
+
+  &__items {
+    &--active {
+      color: var(--black-color);
+
+      .card__item + .card__item {
+        margin-top: 11px;
+      }
+    }
+
+    &--disabled {
+      margin-top: 18px;
+      color: rgba(30, 30, 31, 0.5);
+
+      .card__item + .card__item {
+        margin-top: 11px;
+      }
     }
   }
 
@@ -313,6 +338,10 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+  }
+
+  .card__items--active {
+    color: var(--white-color);
   }
 
   .card__btn {

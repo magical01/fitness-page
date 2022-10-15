@@ -62,7 +62,7 @@
         transform: rotate(15deg);
       }
 
-      .for__image picture {
+      .for__image {
         .for__ellipse--one {
           width: 200px;
           height: 200px;
@@ -255,8 +255,14 @@
 
   }
 
+  &__image {
+    position: relative;
+
+  }
+
   &__picture {
     position: relative;
+
     display: inline-flex;
   }
 

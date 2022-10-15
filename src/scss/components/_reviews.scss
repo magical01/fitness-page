@@ -7,9 +7,6 @@
 
   &__container {
     overflow: hidden;
-    // @include small-tablet {
-    //   padding: 0;
-    // }
   }
 
   &__title {
@@ -57,8 +54,6 @@
     }
 
     @include small-tablet {
-      // border-radius: 0%;
-      // width: 100%;
       display: none;
     }
   }
@@ -88,14 +83,7 @@
     left: 24px;
     width: 676px;
     height: 676px;
-    // transform: translate(-50%, -50%);
     transform: rotate(-90deg);
-
-    // @include tablet {
-    //   width: 500px;
-    //   height: 500px;
-    // }
-
   }
 
   &__progressbar {
@@ -126,7 +114,7 @@
     }
   }
 
-  &__link {
+  &__btn {
     padding: 17px 55px;
 
 

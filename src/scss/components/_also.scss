@@ -36,7 +36,7 @@
     min-width: 210px;
 
     &:hover {
-      .also__image picture {
+      .also__image {
         .also__ellipse--one {
           width: 118px;
           height: 118px;
@@ -54,8 +54,6 @@
       }
 
       .also__text span{
-        font-weight: 500;
-
         &::before {
           width: 100%;
         }
@@ -81,6 +79,10 @@
     @include tablet {
       margin-top: 80px;
     }
+  }
+
+  &__image {
+    position: relative;
   }
 
   &__picture {
