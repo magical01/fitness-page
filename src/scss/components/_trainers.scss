@@ -111,6 +111,7 @@
       display: block;
       font-weight: 500;
       font-size: 30px;
+      line-height: 39px;
       text-align: center;
       transition: all .3s;
 
@@ -136,6 +137,7 @@
       margin-top: 10px;
       font-weight: 400;
       font-size: 24px;
+      line-height: 31px;
       text-align: center;
 
       @include tablet {
@@ -224,16 +226,6 @@
     }
   }
 
-  &:focus {
-    svg circle {
-      fill: rgba(206, 255, 6, 1);
-      stroke: transparent;
-    }
-
-    svg g {
-      opacity: 1;
-    }
-  }
 }
 
 
@@ -301,16 +293,6 @@
     }
   }
 
-  &:focus {
-    svg circle {
-      fill: rgba(206, 255, 6, 1);
-      stroke: transparent;
-    }
-
-    svg g {
-      opacity: 1;
-    }
-  }
 }
 
 .swiper-slide-active {

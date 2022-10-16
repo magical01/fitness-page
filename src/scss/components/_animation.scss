@@ -12,30 +12,32 @@
 [data-aos="custom"] .card:nth-child(1) {
   transform: translateX(-300px);
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
 }
 
 [data-aos="custom"] .card:nth-child(2) {
   transform: translate(0, 200px);
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
 }
 
 [data-aos="custom"] .card:nth-child(3) {
   transform: translateX(300px);
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
 }
 
 [data-aos="custom"].aos-animate .card:nth-child(1) {
   transform: translateX(0px);
   opacity: 1;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
   transition-delay: .4s;
 }
 
 [data-aos="custom"].aos-animate .card:nth-child(2) {
   transform: translate(0, -72px);
   opacity: 1;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
   transition-delay: .8s;
 
   @include tablet {
@@ -46,6 +48,7 @@
 [data-aos="custom"].aos-animate .card:nth-child(3) {
   transform: translateX(0px);
   opacity: 1;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
   transition-delay: 1.2s;
 }
 
@@ -62,7 +65,7 @@
 [data-aos="section-for"] .for__item:nth-child(1) {
   transform: translate(-500px, -4px);
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
 
   @include xl-mobile {
     transform: translate(-150px, 0px);
@@ -71,6 +74,7 @@
 [data-aos="section-for"].aos-animate .for__item:nth-child(1) {
   transform: translate(-27px, -4px);
   opacity: 1;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
   transition-delay: .4s;
 
   @include tablet {
@@ -90,7 +94,7 @@
 [data-aos="section-for"] .for__item:nth-child(2) {
   transform: translate(500px, -218px);
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
 
   @include xl-mobile {
     transform: translate(150px, 0px);
@@ -99,6 +103,7 @@
 [data-aos="section-for"].aos-animate .for__item:nth-child(2) {
   transform: translate(250px, -218px);
   opacity: 1;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
   transition-delay: .8s;
 
   @include small-tablet {
@@ -114,7 +119,7 @@
 [data-aos="section-for"] .for__item:nth-child(3) {
   transform: translate(-500px, -218px);
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
 
   @include xl-mobile {
     transform: translate(-150px, 0px);
@@ -123,6 +128,7 @@
 [data-aos="section-for"].aos-animate .for__item:nth-child(3) {
   transform: translate(30px, -218px);
   opacity: 1;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
   transition-delay: 1.2s;
 
   @include tablet {
@@ -142,7 +148,7 @@
 [data-aos="section-for"] .for__item:nth-child(4) {
   transform: translate(500px, -463px);
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
 
   @include xl-mobile {
     transform: translate(150px, 0px);
@@ -151,6 +157,7 @@
 [data-aos="section-for"].aos-animate .for__item:nth-child(4) {
   transform: translate(37px, -463px);
   opacity: 1;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
   transition-delay: 1.6s;
 
   @include tablet {
@@ -170,12 +177,13 @@
 [data-aos="section-for"] .for__item:nth-child(5) {
   transform: translate(1px, 100px);
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
 
 }
 [data-aos="section-for"].aos-animate .for__item:nth-child(5) {
   transform: translate(1px, -454px);
   opacity: 1;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
   transition-delay: 2s;
 
   @include tablet {

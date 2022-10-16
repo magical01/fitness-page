@@ -15,6 +15,7 @@
     font-family: 'Muller';
     font-weight: 700;
     font-size: 24px;
+    line-height: 24px;
     text-transform: uppercase;
   }
 
@@ -43,11 +44,12 @@
     box-shadow: 0px 24px 77px rgba(50, 50, 50, 0.43);
     width: 400px;
     height: 622px;
+    visibility: hidden;
+    opacity: 0;
     overflow-y: auto;
     background-color: #1E1E1F;
     transform: translateX(150%);
-    transition: all .3s ease-in-out;
-
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
 
   @include mobile {
@@ -71,6 +73,7 @@
 
   &__item {
     font-size: 18px;
+    line-height: 20px;
     color: rgba(30, 30, 31, 0.6);
 
     @include tablet {
@@ -101,7 +104,7 @@
     position: relative;
     padding-left: 4px;
     padding-right: 4px;
-    transition: all .3s;
+    transition: width .3s, color .3s;
 
     &:before {
       content: "";
@@ -112,7 +115,7 @@
       width: 0%;
       height: 8px;
       background: linear-gradient(93.5deg, #DDFF51 4.85%, rgba(206, 255, 6, 0.89) 89.25%);
-      transition: all .3s;
+      transition: width .3s;
 
       @include tablet {
         display: none;
@@ -121,18 +124,18 @@
 
     &:hover {
       color: rgba(30, 30, 31, 0.79);
+      transition: color .3s;
 
       &:before {
         width: 100%;
+        transition: width .3s;
       }
     }
 
     &:focus {
-      outline: none;
-      color: rgba(30, 30, 31, 0.79);
-      &:before {
-        width: 100%;
-      }
+      outline: 1px solid var(--green-color);
+      outline-offset: 2px;
+      transition: none;
     }
 
     &:active {
@@ -169,7 +172,10 @@
 }
 
 .menu--active {
+  visibility: visible;
+  opacity: 1;
   transform: translateX(2px);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .shadow {

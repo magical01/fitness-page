@@ -104,8 +104,9 @@
     }
 
     &:focus {
-      outline: none;
-      color: var(--green-color);
+      outline: 1px solid var(--green-color);
+      outline-offset: 2px;
+      transition: none;
     }
 
     &:active {
@@ -159,9 +160,9 @@
     }
 
     &:focus {
-      border: 1px solid var(--green-color);
-      outline: none;
-      color: var(--green-color);
+      outline: 1px solid var(--green-color);
+      outline-offset: 2px;
+      transition: none;
     }
 
     &:active {
@@ -203,16 +204,12 @@
           fill: var(--green-color);
         }
       }
-
-
     }
 
     &:focus {
-      outline: none;
-
-      svg path {
-        fill: var(--green-color);
-      }
+      outline: 1px solid var(--green-color);
+      outline-offset: 2px;
+      transition: none;
     }
 
     &:active {

@@ -20,6 +20,7 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
+  line-height: 18px;
   color: var(--black-color);
   background-color: var(--white-color);
   overflow-x: hidden;
@@ -131,26 +132,28 @@ a {
   border-radius: 29px;
   font-weight: 600;
   font-size: 20px;
+  line-height: 22px;
   color: var(--white-color);
-  background: transparent;
   background-color: var(--black-color);
-  transition: all .4s;
+  transition: color .3s, background-color .3s;
 
   &:hover {
     color: var(--black-color);
-    background: linear-gradient(93.5deg, #DDFF51 4.85%, rgba(206, 255, 6, 0.89) 89.25%);
+    background-color: var(--green-color);
+    transition: color .3s, background-color .3s;
   }
 
   &:focus {
-    outline: none;
-    color: var(--black-color);
-    background: linear-gradient(93.5deg, #DDFF51 4.85%, rgba(206, 255, 6, 0.89) 89.25%);
+    outline: 1px solid var(--green-color);
+    outline-offset: 4px;
+    transition: none;
   }
 
   &:active {
     outline: none;
     color: var(--black-color);
-    background: linear-gradient(93.5deg, #DDFF51 4.85%, rgba(206, 255, 6, 0.89) 89.25%);
+    background-color: var(--green-color);
+    transition: color .3s, background-color .3s;
   }
 
   @include tablet {
@@ -169,22 +172,26 @@ a {
   border-radius: 29px;
   font-weight: 500;
   font-size: 20px;
+  line-height: 22px;
   color: var(--black-color);
   background: transparent;
   background-color: transparent;
-  transition: all .3s;
+  transition: border .3s;
 
   &:hover {
     border: 1px solid var(--green-color);
+    transition: border .3s;
   }
 
   &:focus {
-    outline: none;
-    border: 1px solid var(--green-color);
+    outline: 1px solid var(--green-color);
+    outline-offset: 4px;
+    transition: none;
   }
 
   &:active {
     border: 1px solid var(--green-color);
+    transition: border .3s;
   }
 
   @include tablet {
@@ -202,16 +209,19 @@ a {
   font-family: 'FuturaPT';
   font-weight: 600;
   font-size: 60px;
+  line-height: 77px;
   text-align: center;
   text-transform: uppercase;
 
   @include small-tablet {
-    font-size: 40px;
+    font-size: 48px;
+    line-height: 62px;
   }
 
 
   @include mini-mobile {
     font-size: 32px;
+    line-height: 46px;
   }
 }
 
@@ -230,14 +240,22 @@ a {
   visibility: hidden;
   opacity: 0;
   transform: translateY(25px);
-  transition: all .5s;
+  transition: box-shadow .5s;
 
   &:hover {
     box-shadow: 0px 0px 19px rgba(140, 255, 50, 0.72);
+    transition: box-shadow .5s;
   }
 
   &:active {
     box-shadow: 0px 0px 19px rgba(140, 255, 50, 0.72);
+    transition: box-shadow .5s;
+  }
+
+  &:focus {
+    outline: 1px solid var(--green-color);
+    outline-offset: 4px;
+    transition: none;
   }
 
   &::before {
@@ -269,5 +287,21 @@ a {
       width: 25px;
       height: 25px;
     }
+  }
+}
+
+.focus-offset {
+  &:focus {
+    outline: 1px solid var(--green-color);
+    outline-offset: 2px;
+    transition: none;
+  }
+}
+
+.focus-offset-4px {
+  &:focus {
+    outline: 1px solid var(--green-color);
+    outline-offset: 4px;
+    transition: none;
   }
 }

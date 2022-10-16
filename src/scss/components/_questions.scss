@@ -158,12 +158,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+
+    &:focus {
+      outline: 1px solid var(--green-color);
+      outline-offset: 2px;
+      transition: none;
+    }
   }
 
   &__title {
     font-weight: 400;
     font-size: 20px;
     color: var(--black-color);
+    text-align: initial;
     transition: all .3s;
 
     @include small-tablet {

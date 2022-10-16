@@ -95,6 +95,7 @@
     margin-bottom: 22px;
     font-weight: 500;
     font-size: 20px;
+    line-height: 24px;
 
     @include small-tablet {
       font-size: 18px;
@@ -151,6 +152,7 @@
     margin: 0;
     margin-bottom: 50px;
     font-size: 20px;
+    line-height: 30px;
     color: rgba(30, 30, 31, 0.8);
 
     @include small-tablet {
@@ -282,11 +284,12 @@
 
 
     svg path {
-      transition: all .3s;
+      transition: fill .3s;
     }
 
     @include hover {
       svg path {
+        transition: fill .3s;
         fill: rgba(206, 255, 6, 0.89);
       }
     }
