@@ -1,0 +1,156 @@
+.also {
+  padding-top: 60px;
+  padding-bottom: 175px;
+
+  @include small-tablet {
+    padding-bottom: 80px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: 'Muller';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    max-width: 280px;
+    min-width: 210px;
+
+    &:hover {
+      .also__image {
+        .also__ellipse--one {
+          width: 118px;
+          height: 118px;
+        }
+
+        .also__ellipse--two {
+          width: 152px;
+          height: 152px;
+        }
+
+        .also__ellipse--three {
+          width: 181px;
+          height: 181px;
+        }
+      }
+
+      .also__text span{
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+
+    &:nth-of-type(1) {
+      .also__text {
+        width: 220px;
+
+        @include tablet {
+          width: auto;
+        }
+      }
+    }
+
+    @include tablet {
+      max-width: none;
+    }
+  }
+
+  &__item + &__item {
+    @include tablet {
+      margin-top: 80px;
+    }
+  }
+
+  &__image {
+    position: relative;
+  }
+
+  &__picture {
+    position: relative;
+    display: inline-flex;
+  }
+
+  &__img {
+    z-index: 50;
+  }
+
+  &__text {
+    display: flex;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+
+    span {
+      display: flex;
+      position: relative;
+      padding-left: 5px;
+      padding-right: 5px;
+      transition: all .3s;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        z-index: -1;
+        width: 0%;
+        height: 13px;
+        background: linear-gradient(93.5deg, #DDFF51 4.85%, rgba(206, 255, 6, 0.89) 89.25%);
+        transition: all .5s;
+      }
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+
+  &__ellipse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    width: 0px;
+    height: 0px;
+    background: linear-gradient(93.5deg, #DDFF51 4.85%, rgba(206, 255, 6, 0.89) 89.25%);
+    transform: translate(-50%, -50%);
+    transition: all .6s;
+
+    &--one {
+      z-index: 10;
+      opacity: 0.8;
+    }
+
+    &--two {
+      opacity: 0.4;
+    }
+
+    &--three {
+      opacity: 0.1;
+    }
+  }
+}
+

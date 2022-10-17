@@ -1,0 +1,368 @@
+.tariffs {
+  padding-bottom: 160px;
+
+  &__container {
+    overflow: hidden;
+  }
+
+  @include small-tablet {
+    padding-bottom: 80px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 80px;
+    }
+  }
+  &__item {
+    width: 377px;
+    height: 828px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include xxl {
+      flex-basis: 32.5%;
+    }
+
+    @include tablet {
+      flex-basis: auto;
+      height: 764px;
+    }
+
+    @include mobile {
+      height: 730px;
+    }
+
+    @include mini-mobile {
+      width: 95%;
+    }
+  }
+
+  &__item + &__item {
+    @include tablet {
+      margin-top: 95px;
+    }
+  }
+}
+
+.card {
+  position: relative;
+  padding: 32px 0px 48px 27px;
+
+  @include small-tablet {
+    padding-bottom: 44px;
+  }
+
+  @include mobile {
+    padding: 15px 0px 44px 20px;
+  }
+
+  @include mini-mobile {
+    padding: 15px 0px 35px 13px;
+  }
+
+  &__sale {
+    position: absolute;
+    top: -30px;
+    right: 18px;
+    border: 1px solid var(--black-color);
+    border-radius: 6px;
+    padding: 11px 7px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 34px;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    transform: rotate(20.34deg);
+
+    @include small-tablet {
+      font-size: 30px;
+      line-height: 32px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 14px;
+    font-family: 'FuturaPT', sans-serif;
+    font-weight: 450;
+    font-size: 28px;
+    line-height: 36px;
+    color: var(--black-color);
+
+    @include small-tablet {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    @include mobile {
+      margin-bottom: 5px;
+    }
+  }
+
+
+  &__prices {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+
+    span {
+      display: inline-block;
+      padding: 0 6px;
+      font-family: 'FuturaPT', sans-serif;
+      font-weight: 600;
+      font-size: 60px;
+      line-height: 77px;
+
+      @include small-tablet {
+        font-size: 54px;
+      }
+    }
+  }
+
+  &__installment {
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+    opacity: 0.8;
+
+    @include small-tablet {
+      font-size: 11px;
+      line-height: 14px;
+    }
+
+    @include mobile {
+      font-size: 10px;
+      line-height: 13px;
+    }
+  }
+
+  &__fullprices {
+    display: inline-flex;
+    margin-top: 32px;
+    margin-bottom: 33px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--black-color);
+
+    @include small-tablet {
+      font-size: 13px;
+      line-height: 17px;
+    }
+
+    @include mobile {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__price-box {
+    margin-left: 1px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__oldprice {
+    position: relative;
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(30, 30, 31, 0.6);
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 9px;
+      width: 40px;
+      height: 1px;
+      background-color: var(--black-color);
+      transform: rotate(-30.47deg);
+
+    }
+  }
+
+  &__included {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+
+    @include small-tablet {
+      font-size: 13px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 2px;
+      width: 10px;
+      height: 6px;
+      background-image: url("../img/svg/marker.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @include small-tablet {
+      font-size: 11px;
+      line-height: 14px;
+    }
+  }
+
+  &__items {
+    &--active {
+      color: var(--black-color);
+
+      .card__item + .card__item {
+        margin-top: 11px;
+      }
+    }
+
+    &--disabled {
+      margin-top: 18px;
+      color: rgba(30, 30, 31, 0.5);
+
+      .card__item + .card__item {
+        margin-top: 11px;
+      }
+    }
+  }
+
+  &__btn--centered {
+    padding-right: 27px;
+    text-align: center;
+  }
+
+  &__btn {
+    padding: 15px 48px;
+    font-weight: 600;
+
+    @include small-tablet {
+      padding: 14px 44px;
+      font-size: 18px;
+    }
+  }
+}
+
+.card-beginner {
+  border: 2px solid var(--black-color);
+  border-radius: 20px;
+}
+
+.card-experience {
+  border: 3px solid rgba(206, 255, 6, 0.86);
+  border-radius: 20px;
+  background: linear-gradient(93.5deg, #DDFF51 4.85%, rgba(206, 255, 6, 0.89) 89.25%);
+  box-shadow: 0px 0px 60px rgba(221, 255, 81, 0.63), 0px 6px 57px rgba(181, 181, 181, 0.25);
+  transform: translateY(-72px);
+
+  .card__sale {
+    color: var(--black-color);
+    background-color: var(--white-color);
+  }
+
+  .card__btn {
+    &:hover {
+      background: var(--white-color);
+    }
+  }
+}
+
+.card-pro {
+  border: 3px solid var(--green-color);
+  border-radius: 20px;
+  background: linear-gradient(169.73deg, #323233 2.49%, #19191A 97.54%);
+
+  .card__sale {
+    color: var(--black-color);
+    background-color: var(--green-color);
+  }
+
+  .card__title {
+    color: var(--white-color);
+  }
+
+  .card__prices {
+    color: var(--white-color);
+  }
+
+  .card__installment {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .card__fullprices {
+    color: var(--white-color);
+  }
+
+  .card__oldprice {
+    color: rgba(255, 255, 255, 0.6);
+
+    &:before {
+      background-color: var(--white-color);
+    }
+  }
+
+  .card__included {
+    color: var(--white-color);
+  }
+
+  .card__item--active {
+    color: var(--white-color);
+  }
+
+  .card__item {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 2px;
+      width: 10px;
+      height: 6px;
+      background-image: url("../img/svg/marker-white.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .card__items--active {
+    color: var(--white-color);
+  }
+
+  .card__btn {
+    color: var(--black-color);
+    background-color: var(--white-color);
+    transition: border .3s, background-color .3s;
+
+    &:hover {
+      border: 1px solid var(--black-color);
+      background-color: var(--green-color);
+      transition: border .3s, background-color .3s;
+    }
+  }
+}

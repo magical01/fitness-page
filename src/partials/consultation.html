@@ -1,0 +1,33 @@
+<section class="consultation">
+  <div class="background"></div>
+  <div class="container consultation__container">
+    <div class="consultation__content">
+      <h2 class="consultation__title main-title">Хочешь попробовать?</h2>
+      <span class="consultation__subtitle">Оставь заявку и мы свяжемся с тобой в течение 30 минут и подберем подходящий
+        тариф</span>
+      <form class="consultation__form form" action="#">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend visually-hidden">Введите данные для того чтобы получить консультацию</legend>
+          <label class="form__label">
+            <input class="form__input input-reset input-name" type="text" name="Имя" placeholder="Ваше имя">
+          </label>
+          <label class="form__label">
+            <input class="form__input input-reset input-tel" type="tel" name="Телефон" placeholder="+7-900-000-00-00">
+          </label>
+          <button class="form__btn btn-reset">Получить консультацию</button>
+          <label class="form__check check">
+            <input class="check__input visually-hidden" type="checkbox" required>
+            <span class="check__box"></span>
+            Нажимая на кнопку, вы даете свое согласие на обработку персональных данных
+          </label>
+        </fieldset>
+      </form>
+    </div>
+    <picture class="consultation__picture">
+      <source srcset="img/sphere-back.avif" type="image/avif">
+      <source srcset="img/sphere-back.webp" type="image/webp">
+      <img loading="lazy" src="img/sphere-back.png" class="consultation__img" width="1100" height="731"
+        alt="Замыленная сфера" aria-hidden="true">
+    </picture>
+  </div>
+</section>

@@ -1,0 +1,8 @@
+import './components/aos'
+import './components/round-letters'
+import './components/trainers-slider'
+import './components/circle-anim'
+import './components/accordion'
+import './components/marathon-circle'
+import './components/scroll-top'
+import './components/validation'

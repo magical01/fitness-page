@@ -1,0 +1,262 @@
+.questions {
+  padding-top: 160px;
+  padding-bottom: 160px;
+
+  @include small-tablet {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  &__container {
+    padding: 0 185px;
+
+    @include big-desktop {
+      padding: 0 135px;
+    }
+
+    @include xxl {
+      padding: 0 115px;
+    }
+
+    @include small-tablet {
+      padding: 0 70px;
+    }
+
+    @include mobile {
+      padding: 0 15px;
+    }
+
+    @include mini-mobile {
+      padding: 0 10px;
+    }
+  }
+
+  &__title {
+    max-width: 757px;
+    line-height: 77px;
+    text-align: start;
+
+    span {
+      display: inline-block;
+      color: var(--green-color);
+
+      @include tablet {
+        margin-right: 92px;
+      }
+
+      @include small-tablet {
+        margin-right: 0;
+      }
+    }
+
+    @include tablet {
+      font-size: 40px;
+      line-height: 52px;
+    }
+
+    @include mini-mobile {
+      font-size: 27px;
+    }
+  }
+
+  &__box--end {
+    margin-top: 80px;
+    text-align: end;
+
+    @include mobile {
+      margin-top: 40px;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 16px 65px;
+
+    @include mini-mobile {
+      padding: 10px 50px;
+      font-size: 12px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    margin-top: 84px;
+
+    @include xl {
+      flex-direction: column;
+      margin-top: 42px;
+    }
+
+    @include small-tablet {
+      width: 100%;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    margin-right: 19px;
+    width: 44.6%;
+
+    @include xl {
+      width: 100%;
+      margin-bottom: 36px;
+      margin-right: 0;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 44.6% - 19px);
+
+    @include xl {
+      width: 100%;
+    }
+  }
+
+  &__item + &__item {
+    margin-top: 36px;
+  }
+
+  &__item {
+    cursor: pointer;
+  }
+}
+
+.accordion {
+  &__item {
+    width: 48%;
+    cursor: pointer;
+
+    &--active {
+      .accordion__title {
+        text-shadow: var(--green-color) -2px 2px 3px;
+      }
+
+      .accordion__btn {
+        border-radius: 50%;
+        background-color: var(--green-color);
+
+        &::before {
+          transform: rotate(-45deg);
+        }
+
+        &::after {
+          transform: rotate(45deg);
+        }
+      }
+
+      .dropdown {
+        padding-top: 24px;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &:focus {
+      outline: 1px solid var(--green-color);
+      outline-offset: 2px;
+      transition: none;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--black-color);
+    text-align: initial;
+    transition: all .3s;
+
+    @include small-tablet {
+      display: flex;
+      max-width: 380px;
+    }
+
+    @include xl-mobile {
+      font-size: 16px;
+      max-width: 300px;
+    }
+
+    @include mini-mobile {
+      max-width: 270px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    width: 29px;
+    height: 29px;
+    background-color: transparent;
+    transition: all .3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 21%;
+      top: 49%;
+      display: inline-block;
+      width: 16px;
+      height: 1px;
+      background-color: var(--black-color);
+      transition: all .3s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 21%;
+      top: 49%;
+      display: inline-block;
+      width: 16px;
+      height: 1px;
+      background-color: var(--black-color);
+      transform: rotate(90deg);
+      transition: all .3s;
+    }
+  }
+}
+
+.dropdown {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  will-change: max-height;
+  transition: all .3s ease-in-out;
+
+  span {
+    display: block;
+  }
+
+  &__list {
+    margin-top: -1px;
+    padding-left: 6px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 38%;
+      left: 3px;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background-color: var(--black-color);
+    }
+  }
+}

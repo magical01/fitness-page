@@ -1,0 +1,262 @@
+.consultation {
+  position: relative;
+  background: black;
+
+  &__container {
+    padding-top: 98px;
+    padding-bottom: 87px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mini-mobile {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    color: var(--white-color);
+  }
+
+  &__subtitle {
+    display: block;
+    max-width: 651px;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+
+    @include mini-mobile {
+      font-size: 12px;
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    display: flex;
+    transform: translateY(-98px);
+
+    @include mini-mobile {
+      height: 300px;
+      transform: translateY(78px);
+    }
+  }
+
+  &__blur {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(25px);
+  }
+}
+
+.background {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 58px;
+  width: 515px;
+  color: #fff;
+  transform: translateX(-13px);
+
+  @include small-tablet {
+    margin-top: 40px;
+    width: 380px;
+    transform: translateX(0);
+  }
+
+  @include mini-mobile {
+    width: 100%;
+  }
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  &__label {
+    position: relative;
+  }
+
+  &__label + &__label {
+    margin-top: 43px;
+
+    @include small-tablet {
+      margin-top: 32px;
+    }
+  }
+
+  &__input {
+    padding-left: 30px;
+    padding-right: 100px;
+    width: 100%;
+    height: 78px;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 42px;
+    color: var(--white-color);
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 39px;
+    transition: all .3s;
+
+    @include small-tablet {
+      font-size: 22px;
+      line-height: 38px;
+    }
+
+    @include mini-mobile {
+      height: 64px;
+      font-size: 18px;
+      line-height: 34px;
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+      transition: all .3s;
+    }
+
+    &:focus {
+      outline: 1px solid var(--green-color);
+      outline-offset: 2px;
+      transition: none;
+
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+
+    &:active {
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+
+  }
+
+  &__btn {
+    margin-top: 52px;
+    margin-bottom: 15px;
+    padding: 27px 78px;
+    border-radius: 45px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 36px;
+    color: var(--black-color);
+    background-color: var(--white-color);
+    transition: all .3s;
+
+    @include small-tablet {
+      margin-top: 40px;
+      padding: 18px 20px;
+      font-size: 26px;
+    }
+
+    @include mini-mobile {
+      padding: 14px 20px;
+      font-size: 20px;
+    }
+
+    &:hover {
+      background-color: var(--green-color);
+    }
+
+    &:focus {
+      outline: 1px solid var(--green-color);
+      outline-offset: 4px;
+      transition: none;
+    }
+
+    &:active {
+      background-color: var(--green-color);
+    }
+  }
+}
+
+.check {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 36px;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.88);
+  cursor: pointer;
+
+  @include small-tablet {
+    font-size: 12px;
+  }
+
+  @include mini-mobile {
+    font-size: 10px;
+  }
+
+  &__input {
+    transition: all .3s;
+
+    &:focus + .check__box {
+      outline: 1px solid var(--green-color);
+      outline-offset: 2px;
+      transition: none;
+    }
+
+    &:checked + .check__box {
+      background-color: #fff;
+      background-image: url("../img/svg/checkmark.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+  }
+
+  &__box {
+    position: absolute;
+    top: 10px;
+    border: 1px solid var(--white-color);
+    margin-left: -36px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 2px;
+    transition: all .3s;
+
+    @include small-tablet {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.just-validate-error-label {
+  position: absolute;
+  left: 26px;
+  transition: all .2s;
+}

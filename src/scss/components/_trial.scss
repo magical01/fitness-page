@@ -1,0 +1,158 @@
+.trial {
+  padding-bottom: 160px;
+
+  @include small-tablet {
+    padding-bottom: 80px;
+  }
+
+  &__title {
+    color: var(--green-color);
+  }
+
+  &__content {
+    display: flex;
+    margin-top: 60px;
+
+    @include xl {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__left {
+    width: 476px;
+
+    @include mobile {
+      width: auto;
+    }
+
+  }
+
+  &__image {
+    width: 100%;
+
+    @include mobile {
+      width: 350px;
+    }
+
+    @include mini-mobile {
+      width: 290px;
+    }
+  }
+
+  &__round {
+    top: 36%;
+    left: 36%;
+
+    @include mobile {
+      top: 31%;
+      left: 31%;
+    }
+
+    @include mini-mobile {
+      top: 27%;
+      left: 27%;
+    }
+  }
+
+  &__right {
+    margin-left: 8%;
+    padding-top: 121px;
+    width: calc(92% - 476px);
+
+    @include xxl {
+      margin-left: 3%;
+      width: calc(97% - 476px);
+    }
+
+    @include xl {
+      margin-top: 60px;
+      margin-left: 0px;
+      padding-top: 0px;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 35px;
+    color: rgba(30, 30, 31, 0.6);
+
+    @include xl {
+      display: none;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: 60px;
+
+    @include xl {
+      justify-content: center;
+      margin-top: 0;
+    }
+  }
+
+  &__train {
+    padding: 16px 40px;
+    margin-right: 20px;
+    width: 50%;
+
+    @include xxl {
+      margin-right: 10px;
+      padding: 16px 16px;
+    }
+
+    @include xl {
+      margin-right: 20px;
+      width: 297px;
+    }
+
+    @include mobile {
+      margin-right: 10px;
+      padding: 13px 10px;
+      width: 50%
+    }
+
+    @include mini-mobile {
+      margin-right: 5px;
+      padding: 10px 10px;
+    }
+  }
+
+  &__programm {
+    padding: 16px 30px;
+    width: calc(50% - 20px);
+
+    @include xxl {
+      padding: 16px 16px;
+      width: calc(50% - 10px);
+    }
+
+    @include xl {
+      width: 278px;
+    }
+
+    @include mobile {
+      padding: 13px 10px;
+      width: calc(50% - 10px);
+    }
+
+    @include mini-mobile {
+      padding: 10px 7px;
+      width: calc(50% - 5px);
+    }
+  }
+
+
+  &__letter {
+    position: absolute;
+    left: 65px;
+    font-family: "Muller";
+    font-weight: 400;
+    font-size: 18px;
+    transform-origin: 0 65px;
+    color: var(--white-color);
+  }
+}

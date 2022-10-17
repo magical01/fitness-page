@@ -1,0 +1,402 @@
+.trainers {
+  padding-bottom: 160px;
+
+  @include small-tablet {
+    padding-bottom: 80px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    span {
+      color: var(--green-color);
+    }
+  }
+
+  &__slider {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__content {
+    position: relative;
+
+    @include tablet {
+      width: 350px !important;
+    }
+
+    @include mobile {
+      width: 250px !important;
+    }
+
+    @include mini-mobile {
+      width: 200px !important;
+    }
+  }
+
+  &__image {
+    position: relative;
+    transition: all .3s;
+
+    picture {
+      display: flex;
+    }
+  }
+
+  &__round {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 34px;
+    right: 31px;
+    z-index: 100;
+    animation: 6s linear 0s infinite round-text-animation;
+
+    @include tablet {
+      top: -3px;
+      right: -1px;
+    }
+
+  }
+
+  &__letter {
+    position: absolute;
+    left: 50px;
+    font-family: "Muller";
+    font-weight: 400;
+    font-size: 15px;
+    width: 11px;
+    line-height: 23px;
+    transform-origin: 0 50px;
+    color: var(--white-color);
+  }
+
+  &__play {
+    position: absolute;
+    top: 70px;
+    right: 65px;
+
+    svg {
+      width: 27px;
+      height: 27px;
+
+      path {
+        fill: var(--white-color);
+      }
+    }
+
+    @include tablet {
+      top: 32px;
+      right: 32px;
+    }
+  }
+
+  &__text {
+    margin-top: 60px;
+
+    @include mobile {
+      margin-top: 20px;
+    }
+
+    strong {
+      display: block;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 39px;
+      text-align: center;
+      transition: all .3s;
+
+      @include tablet {
+        font-size: 24px;
+      }
+
+      @include mobile {
+        font-size: 20px;
+      }
+
+      @include mini-mobile {
+        font-size: 18px;
+      }
+
+      &:hover {
+        color: var(--green-color);
+      }
+    }
+
+    span {
+      display: block;
+      margin-top: 10px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 31px;
+      text-align: center;
+
+      @include tablet {
+        font-size: 20px;
+      }
+
+      @include mobile {
+        font-size: 14px;
+      }
+
+      @include mini-mobile {
+        font-size: 12px;
+      }
+    }
+
+  }
+
+  &__buttons {
+    position: relative;
+
+  }
+}
+
+.trainers-btn-prev {
+  position: absolute;
+  top: 274px;
+  left: 219px;
+  z-index: 50;
+
+  @include xxl {
+    left: 15%;
+  }
+
+  @include tablet {
+    left: 5%;
+  }
+
+
+  @include small-tablet {
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @include mobile {
+    top: 170px;
+    left: 0%;
+  }
+
+  @include mini-mobile {
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  svg circle {
+    fill: transparent;
+    transition: all .3s;
+  }
+
+  svg g {
+    transition: all .3s;
+  }
+
+  @include hover {
+    svg circle {
+      fill: rgba(206, 255, 6, 1);
+      stroke: transparent;
+    }
+
+    svg g {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    svg circle {
+      fill: rgba(206, 255, 6, 1);
+      stroke: transparent;
+    }
+
+    svg g {
+      opacity: 1;
+    }
+  }
+
+}
+
+
+.trainers-btn-next {
+  position: absolute;
+  top: 274px;
+  right: 219px;
+  z-index: 50;
+
+  @include xxl {
+    right: 15%;
+  }
+
+  @include tablet {
+    right: 5%;
+  }
+
+  @include small-tablet {
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @include mobile {
+    top: 170px;
+    right: 0%;
+  }
+
+  @include mini-mobile {
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  svg circle {
+    fill: transparent;
+    transition: all .3s;
+  }
+
+  svg g {
+    transition: all .3s;
+  }
+
+  @include hover {
+    svg circle {
+      fill: rgba(206, 255, 6, 1);
+      stroke: transparent;
+    }
+
+    svg g {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    svg circle {
+      fill: rgba(206, 255, 6, 1);
+      stroke: transparent;
+    }
+
+    svg g {
+      opacity: 1;
+    }
+  }
+
+}
+
+.swiper-slide-active {
+  opacity: 0.6;
+  transition: all .3s;
+
+  @include tablet {
+    opacity: 1;
+  }
+
+  .trainers__round {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  .trainers__play {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  .trainers__text {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  .trainers__content {
+    width: 322px;
+    transform: rotate(-13deg);
+    transition: all .3s;
+
+    @include tablet {
+      transform: rotate(0);
+    }
+  }
+
+  .trainers__image {
+    transform: translate(-70%, 140px);
+    transition: all .3s;
+
+    @include tablet {
+      transform: translate(0, 0);
+    }
+  }
+}
+
+.swiper-slide-duplicate-prev {
+  opacity: 0.6;
+  transition: all .3s;
+
+  @include tablet {
+    opacity: 1;
+  }
+
+  .trainers__round {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  .trainers__play {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  .trainers__text {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  .trainers__content {
+    width: 322px;
+    transform: rotate(13deg);
+    transition: all .3s;
+
+    @include tablet {
+      transform: rotate(0);
+
+    }
+  }
+
+  .trainers__image {
+    transform: translate(70%, 140px);
+    transition: all .3s;
+
+    @include tablet {
+      transform: translate(0, 0);
+    }
+  }
+}
+
