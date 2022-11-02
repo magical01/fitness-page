@@ -22,10 +22,8 @@
   }
   &__item {
     width: 377px;
-    height: 828px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
     @include xxl {
       flex-basis: 32.5%;
@@ -33,11 +31,11 @@
 
     @include tablet {
       flex-basis: auto;
-      height: 764px;
+      // height: 764px;
     }
 
     @include mobile {
-      height: 730px;
+      // height: 730px;
     }
 
     @include mini-mobile {
@@ -56,16 +54,17 @@
   position: relative;
   padding: 32px 0px 48px 27px;
 
-  @include small-tablet {
-    padding-bottom: 44px;
+  @include tablet {
+    padding-bottom: 30px;
   }
 
+
   @include mobile {
-    padding: 15px 0px 44px 20px;
+    padding: 15px 0px 30px 20px;
   }
 
   @include mini-mobile {
-    padding: 15px 0px 35px 13px;
+    padding: 15px 0px 30px 13px;
   }
 
   &__sale {
@@ -85,6 +84,14 @@
     @include small-tablet {
       font-size: 30px;
       line-height: 32px;
+    }
+  }
+
+  &__inner {
+    margin-bottom: 40px;
+
+    @include tablet {
+      margin-bottom: 20px;
     }
   }
 

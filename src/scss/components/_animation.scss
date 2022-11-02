@@ -19,12 +19,20 @@
   transform: translate(0, 200px);
   opacity: 0;
   transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+
+  @include tablet {
+    transform: translateX(300px);
+  }
 }
 
 [data-aos="custom"] .card:nth-child(3) {
   transform: translateX(300px);
   opacity: 0;
   transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+
+  @include tablet {
+    transform: translateX(-300px);
+  }
 }
 
 [data-aos="custom"].aos-animate .card:nth-child(1) {
@@ -41,7 +49,7 @@
   transition-delay: .8s;
 
   @include tablet {
-    transform: translate(0, 0);
+    transform: translateX(0px);
   }
 }
 
